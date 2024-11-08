@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login-page">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div id="converter-page" style="display: none;">
+    <h2>Currency Converter</h2>
+    <div class="converter-container">
+      <label>Amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount" required>
+      
+      <label>From:</label>
+      <select id="from-currency">
+      </select>
+
+      <label>To:</label>
+      <select id="to-currency">
+      </select>
+      
+      <button onclick="convertCurrency()">Convert</button>
+      
+      <p id="result"></p>
+      <p id="error-message" class="error"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
